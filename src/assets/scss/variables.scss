@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+$text-color: #606266;
+$border-color: #DCDFE6;
+
+@keyframes pipple {
+  from{
+    transform: translate3d(-50%, -50%, 0) scale(2, 2);
+    opacity: .3;
+  }
+  to{
+    transform: translate3d(-50%, -50%, 0) scale(25, 25);
+    opacity: 0;
+  }
+}
