@@ -1,10 +1,11 @@
 <template>
   <div class="t-img__wrapper" :style="{
     display: block ? 'flex' : 'inline-flex',
+    width: width || naturalWidth || 'auto',
    }">
     <div :class="imgClasses" :style="{
        backgroundImage: `url(${lazy ? loadingSrc : src})`,
-       width: width || naturalWidth || 'auto',
+       width: '100%',
        height: height || 'auto'
      }">
       <div class="t-img__sizer" :style="{
@@ -104,6 +105,8 @@ export default {
 
 <style lang="scss" scoped>
 .t-img__wrapper{
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   max-width: 100%;

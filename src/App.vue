@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <curtain></curtain>
     <div>
       <t-btn normal round color="#409EFF">
         我是按钮
@@ -16,7 +17,16 @@
         <t-icon name="info" v-slot:icon></t-icon>
       </t-btn>
     </div>
-    <div style="width: 30%">
+    <div>
+      <t-img
+        cover
+        hover
+        lazy
+        aspect-ratio="16/9"
+        width="30%"
+        :src="require('./assets/image/ycy.jpg')"
+      >
+      </t-img>
       <t-img
         cover
         hover
@@ -25,13 +35,18 @@
       >
       </t-img>
     </div>
+    <div style="height: 3000px"></div>
   </div>
 </template>
 
 <script>
 
+import curtain from "@/components/curtain/curtain";
  export default {
 	 name: 'app',
+   components: {
+	   curtain
+   },
 	 data() {
 		 return {
 
@@ -54,5 +69,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $text-color;
+  overflow: auto;
+  min-height: 100vh;
 }
 </style>
